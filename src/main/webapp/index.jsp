@@ -39,10 +39,10 @@
                     })
                 })*/
 
-                $('p.func').css({ 'cursor': 'pointer' }).hover(function() {
+                $('p.func').css({ 'cursor': 'pointer', 'color': '#238f8f' }).hover(function() {
                     $(this).css({ 'color': '#3de', 'text-decoration': 'underline' });
                 }, function() {
-                    $(this).css({ 'color': '#000', 'text-decoration': 'none' });
+                    $(this).css({ 'color': '#238f8f', 'text-decoration': 'none' });
                 }).click(function() {
                     $.fn.jerichoTab.addTab({
                         tabFirer: $(this),
@@ -366,29 +366,20 @@
         	<li class="header">MAIN NAVIGATION</li>
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
+                <i class="fa fa-dashboard"></i> <span>欢迎</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><p class="func" dataType='html' dataLink='index.html' iconImg='images/msn.gif'><i class="fa fa-circle-o"></i> Dashboard v1</p></li>
-                <li><p class="func" dataType='html' dataLink='template/msn.htm' iconImg='images/msn.gif'><i class="fa fa-circle-o"></i> Dashboard v2</p></li>
+                <li><p class="func" jerichotabindex="0"><i class="fa fa-circle-o"></i>&nbsp;&nbsp;&nbsp;&nbsp;欢迎</p></li>
               </ul>
             </li>
-            <li class="treeview">
+            <!-- <li class="treeview">
               <a href="#">
-                <i class="fa fa-dashboard"></i> <span>About</span> <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><p class="func" jerichotabindex="0"><i class="fa fa-circle-o"></i> JerichoTab</p></li>
-              </ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-share"></i> <span>Products</span>
+                <i class="fa fa-share"></i> <span>管理员菜单</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
                 <li>
-                  <a href="#"><i class="fa fa-circle-o"></i> IM<i class="fa fa-angle-left pull-right"></i></a>
+                  <a href="#"><i class="fa fa-circle-o"></i> 菜单管理<i class="fa fa-angle-left pull-right"></i></a>
                   <ul class="treeview-menu">
                     <li><p class="func" dataType='html' dataLink='template/msn.htm' iconImg='images/msn.gif'><i class="fa fa-circle-o"></i> MSN</p></li>
                     <li><p class="func" dataType='html' dataLink='template/skype.htm' iconImg='images/skype.png'><i class="fa fa-circle-o"></i> Skype</p></li>
@@ -400,18 +391,17 @@
                   </ul>
                 </li>
               </ul>
-            </li>
+            </li> -->
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Corporations</span> <i class="fa fa-angle-left pull-right"></i>
+                <i class="fa fa-dashboard"></i> <span>管理员菜单</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><p class="func" iconImg="images/yahoo.png" dataType="iframe" dataLink="http://www.yahoo.com"><i class="fa fa-circle-o"></i> Yahoo</p></li>
-                <li><p class="func" dataType='iframe' dataLink='http://www.g.cn'><i class="fa fa-circle-o"></i> Google</p></li>
-                <li><p class="func" dataType="iframe" dataLink="handler/dataexchange.ashx?action=microsoft"><i class="fa fa-circle-o"></i> Microsoft</p></li>
+                <li><p class="func" dataType="iframe" dataLink="${pageContext.request.contextPath}/test/test"><i class="fa fa-circle-o"></i> &nbsp;&nbsp;&nbsp;&nbsp;菜单管理</p></li>
+                <li><p class="func" dataType="iframe" dataLink="${pageContext.request.contextPath}/test/test"><i class="fa fa-circle-o"></i> &nbsp;&nbsp;&nbsp;&nbsp;用户管理</p></li>
               </ul>
             </li>
-            <li class="treeview">
+            <%-- <li class="treeview">
               <a href="#">
                 <i class="fa fa-dashboard"></i> <span>News</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
@@ -426,9 +416,9 @@
                 <i class="fa fa-dashboard"></i> <span>Testing...</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><p class="func" iconImg="images/clock.png" dataType='ajax' dataLink='handler/dataexchange.ashx?action=getdatetime'><i class="fa fa-circle-o"></i> Get Ticks(AJAX)</p></li>
+                <li><p class="func" iconImg="images/clock.png" dataType='ajax' dataLink='${pageContext.request.contextPath}/test/test'><i class="fa fa-circle-o"></i> Get Ticks(AJAX)</p></li>
               </ul>
-            </li>
+            </li> --%>
 	    </ul>
     </section>
         <!-- /.sidebar -->
