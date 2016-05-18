@@ -96,7 +96,7 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="packagesToScan">
 			<list>
-				<value>com.hibernate.tag.entity</value>
+				<value>com.my.backend.pro.po</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
