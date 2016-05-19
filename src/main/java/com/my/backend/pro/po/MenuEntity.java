@@ -3,6 +3,9 @@
  */
 package com.my.backend.pro.po;
 
+import java.io.Serializable;
+
+import javax.persistence.Cacheable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -27,9 +30,12 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
  */
 @Entity
 @Table(name = "sys_permission")
-@Cache(usage = CacheConcurrencyStrategy.READ_ONLY, region="javaClassName")
-public class MenuEntity {
+@Cacheable
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+public class MenuEntity implements Serializable{
 
+	private static final long serialVersionUID = 1L;
+	
 	private int id;
 	private String name;
 	private String type;

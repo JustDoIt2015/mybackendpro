@@ -7,6 +7,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Repository;
@@ -82,7 +83,9 @@ public class MenuDao implements BasicDao<MenuEntity> {
 		List<MenuEntity> list = null;
 		try{
 			session = sessionFactory.openSession();
-			list = session.createQuery("from MenuEntity").list();
+			Query query = session.createQuery("from MenuEntity");
+			query.setCacheable(true);
+			list = query.list();
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

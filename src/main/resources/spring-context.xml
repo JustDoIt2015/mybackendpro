@@ -79,14 +79,14 @@
             <value>${c3p0.testConnectionOnCheckin}</value>
         </property>-->
          
-        <!-- 泄漏 监控 
+        <!-- 泄漏 监控 -->
         <property name="unreturnedConnectionTimeout">
             <value>100</value>
         </property>
  
         <property name="debugUnreturnedConnectionStackTraces">
             <value>false</value>
-        </property>-->
+        </property>
          
          
     </bean>
@@ -111,8 +111,8 @@
 				<prop key="hibernate.cache.use_query_cache">true</prop>
 				<!-- 高速缓存提供程序 -->
 				<prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</prop>
-				<!-- 强制Hibernate以更人性化的格式将数据存入二级缓存 
-				<prop key="hibernate.cache.use_structured_entries">true</prop>-->
+				<!-- 强制Hibernate以更人性化的格式将数据存入二级缓存 -->
+				<prop key="hibernate.cache.use_structured_entries">true</prop>
 				<!-- Hibernate将收集有助于性能调节的统计数据 
 				<prop key="hibernate.generate_statistics">true</prop>-->
 				
