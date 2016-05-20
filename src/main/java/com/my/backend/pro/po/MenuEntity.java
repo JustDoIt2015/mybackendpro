@@ -47,6 +47,7 @@ public class MenuEntity implements Serializable{
 	private String available;
 	
 	@Id
+	@Column(length=5,nullable=false, unique=true)
 	public int getId() {
 		return id;
 	}
@@ -55,7 +56,7 @@ public class MenuEntity implements Serializable{
 		this.id = id;
 	}
 
-	@Column
+	@Column(length=100, nullable=false)
 	public String getName() {
 		return name;
 	}

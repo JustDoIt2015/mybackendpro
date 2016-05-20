@@ -315,8 +315,8 @@ $.extend($.fn, {
                 }
             }
             src += (src.indexOf('?') == -1 ? '?' : '&') + 'tabPageId=' + jerichotabiframe;
-            var iframe = $('<iframe id="' + jerichotabiframe + '" name="' + jerichotabiframe + '" src="' + src + '" frameborder="0" scrolling="auto" />')
-							.css({ width: '100%', height: $(this).parent().height(), border: 0 }).appendTo($(this));
+            var iframe = $('<iframe id="' + jerichotabiframe + '" name="' + jerichotabiframe + '" src="' + src + '" frameborder="1" scrolling="yes" />')
+							.css({ width: "100%", height: $('.content-wrapper').height()-10, border: "0 solid #00ff00" }).appendTo($(this));
             //add a listener to the load event
             $('#' + jerichotabiframe).addEvent('load', function() {
                 //if onComlete(Function) is not null, then release it
